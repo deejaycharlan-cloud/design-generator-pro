@@ -1,4 +1,4 @@
-# 🎨 Design Generator Pro - Agent de Génération pour Etsy/Gelato
+# 🎨 Design Generator Pro - Agent de Génération
 
 Interface web professionnelle pour générer automatiquement des designs optimisés pour la vente sur Etsy via Gelato. Cet agent vous permet de créer des visuels de haute qualité pour vêtements, mugs, coques de téléphone, posters et plus encore.
 
