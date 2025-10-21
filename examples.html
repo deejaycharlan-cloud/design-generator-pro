@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemples & Inspiration - Design Generator Pro</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .examples-hero {
+            text-align: center;
+            padding: 3rem 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin-bottom: 3rem;
+        }
+        .examples-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .examples-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .example-card {
+            background: var(--dark-card);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 2px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+        .example-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+            box-shadow: var(--shadow-lg);
+        }
+        .example-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #667eea20 0%, #764ba240 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+        .example-content {
+            padding: 1.5rem;
+        }
+        .example-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+        .example-description {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        .example-prompt {
+            background: var(--dark-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            font-family: monospace;
+        }
+        .example-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .tag {
+            background: rgba(99, 102, 241, 0.2);
+            color: var(--primary-color);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        .try-btn {
+            width: 100%;
+            background: var(--gradient-1);
+            color: white;
+            border: none;
+            padding: 1rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .try-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        .category-section {
+            background: var(--dark-card);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+        }
+        .category-title {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .stat-card {
+            background: var(--dark-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 2px solid var(--border-color);
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        .inspiration-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="examples-hero">
+        <div class="container">
+            <h1>💡 Exemples & Inspiration</h1>
+            <p>Découvrez des combinaisons gagnantes et des idées de designs populaires sur Etsy</p>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <div class="container">
+            
+            <!-- Statistics -->
+            <section class="category-section">
+                <h2 class="category-title">
+                    <i class="fas fa-chart-line"></i>
+                    Statistiques de Ventes Etsy 2024
+                </h2>
+                <div class="inspiration-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">$2.5M+</div>
+                        <div class="stat-label">Ventes designs POD</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">75%</div>
+                        <div class="stat-label">Préfèrent minimaliste</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">#1</div>
+                        <div class="stat-label">Mugs à citations</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">$18-25</div>
+                        <div class="stat-label">Prix moyen optimal</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mug Examples -->
+            <section class="category-section">
+                <h2 class="category-title">
+                    <i class="fas fa-mug-hot"></i>
+                    Mugs - Best Sellers
+                </h2>
+                <div class="examples-grid">
+                    <div class="example-card">
+                        <div class="example-image">☕</div>
+                        <div class="example-content">
+                            <div class="example-title">Mug Café Minimaliste</div>
+                            <div class="example-description">
+                                Design simple et élégant pour les amateurs de café. Citation inspirante en typographie moderne.
+                            </div>
+                            <div class="example-tags">
+                                <span class="tag">Mug</span>
+                                <span class="tag">Minimaliste</span>
+                                <span class="tag">Café</span>
+                            </div>
+                            <div class="example-prompt">
+                                "Minimalist coffee cup illustration with steam rising, clean lines, warm colors, cozy atmosphere, print-ready for mug"
+                            </div>
+                            <button class="try-btn" onclick="tryExample('mug', 'minimalist', 'coffee')">
+                                <i class="fas fa-magic"></i> Essayer ce style
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="example-card">
+                        <div class="example-image">💪</div>
+                        <div class="example-content">
+                            <div class="example-title">Mug Motivation</div>
+                            <div class="example-description">
+                                Message inspirant pour commencer la journée. Parfait pour cadeaux d'encouragement.
+                            </div>
+                            <div class="example-tags">
+                                <span class="tag">Mug</span>
+                                <span class="tag">Typographie</span>
+                                <span class="tag">Motivation</span>
+                            </div>
+                            <div class="example-prompt">
+                                "Bold motivational quote in elegant typography, gold foil effect, inspirational design for coffee mug"
+                            </div>
+                            <button class="try-btn" onclick="tryExample('mug', 'typography', 'motivation')">
+                                <i class="fas fa-magic"></i> Essayer ce style
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="example-card">
+                        <div class="example-image">🐱</div>
+                        <div class="example-content">
+                            <div class="example-title">Mug Chat Mignon</div>
+                            <div class="example-description">
+                                Adorable illustration de chat pour les amoureux des animaux. Style kawaii populaire.
+                            </div>
+                            <div class="example-tags">
+                                <span class="tag">Mug</span>
+                                <span class="tag">Illustration</span>
+                                <span class="tag">Animaux</span>
+                            </div>
+                            <div class="example-prompt">
+                                "Cute cat sleeping in coffee cup, kawaii style, pastel colors, adorable illustration for mug"
+                            </div>
+                            <button class="try-btn" onclick="tryExample('mug', 'illustration', 'animals')">
+                                <i class="fas fa-magic"></i> Essayer ce style
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- T-shirt Examples -->
+            <section class="category-section">
+                <h2 class="category-title">
+                    <i class="fas fa-tshirt"></i>
+                    T-shirts - Tendances 2024
+                </h2>
+                <div class="examples-grid">
+                    <div class="example-card">
+                        <div class="example-image">🌄</div>
+                        <div class="example-content">
+                            <div class="example-title">T-shirt Vintage Nature</div>
+                            <div class="example-description">
+                                Design rétro avec paysage de montagne. Style années 70-80 très populaire.
+                            </div>
+                            <div class="example-tags">
+                                <span class="tag">T-shirt</span>
+                                <span class="tag">Vintage</span>
+                                <span class="tag">Nature</span>
+                            </div>
+                            <div class="example-prompt">
+                                "Retro sunset with mountains, 80s style, gradient colors, nostalgic vibe, transparent background, centered design"
+                            </div>
+                            <button class="try-btn" onclick="tryExample('tshirt', 'vintage', 'nature')">
+                                <i class="fas fa-magic"></i> Essayer ce style
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="example-card">
+                        <div class="example-image">🦌</div>
+                        <div class="example-content">
+                            <div class="example-title">T-shirt Géométrique Animal</div>
+                            <div class="example-description">
+                                Design moderne avec formes géométriques. Style scandinave minimaliste.
+                            </div>
+                            <div class="example-tags">
+                                <span class="tag">T-shirt</span>
+                                <span class="tag">Géométrique</span>
+                                <span class="tag">Animaux</span>
+                            </div>
+                            <div class="example-prompt">
+                                "Geometric deer head with forest inside, double exposure effect, modern wildlife art, transparent background"
+                            </div>
+                            <button class="try-btn" onclick="tryExample('tshirt', 'geometric', 'animals')">
+                                <i class="fas fa-magic"></i> Essayer ce style
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="example-card">
+                        <div class="example-image">🎨</div>
+                        <div class="example-content">
+                            <div class="example-title">T-shirt Abstrait Coloré</div>
+                            <div class="example-description">
+                                Formes abstraites vibrantes. Design artistique contemporain unique.
+                            </div>
+                            <div class="example-tags">
+                                <span class="tag">T-shirt</span>
+                                <span class="tag">Abstrait</span>
+                                <span class="tag">Moderne</span>
+                            </div>
+                            <div class="example-prompt">
+                                "Geometric shapes in vibrant colors, modern abstract art, bold composition, transparent background, centered"
+                            </div>
+                            <button class="try-btn" onclick="tryExample('tshirt', 'abstract', 'trending')">
+                                <i class="fas fa-magic"></i> Essayer ce style
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Poster Examples -->
+            <section class="category-section">
+                <h2 class="category-title">
+                    <i class="fas fa-image"></i>
+                    Posters - Déco Populaire
+                </h2>
+                <div class="examples-grid">
+                    <div class="example-card">
+                        <div class="example-image">🏔️</div>
+                        <div class="example-content">
+                            <div class="example-title">Poster Montagne Scandinave</div>
+                            <div class="example-description">
+                                Style nordique minimaliste. Parfait pour déco moderne et épurée.
+                            </div>
+                            <div class="example-tags">
+                                <span class="tag">Poster</span>
+                                <span class="tag">Minimaliste</span>
+                                <span class="tag">Nature</span>
+                            </div>
+                            <div class="example-prompt">
+                                "Scandinavian forest scene, misty pine trees, muted colors, Nordic aesthetic, serene mood, vertical format"
+                            </div>
+                            <button class="try-btn" onclick="tryExample('poster', 'minimalist', 'nature')">
+                                <i class="fas fa-magic"></i> Essayer ce style
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="example-card">
+                        <div class="example-image">🌿</div>
+                        <div class="example-content">
+                            <div class="example-title">Poster Botanique</div>
+                            <div class="example-description">
+                                Illustration scientifique de plantes. Style vintage éducatif élégant.
+                            </div>
+                            <div class="example-tags">
+                                <span class="tag">Poster</span>
+                                <span class="tag">Illustration</span>
+                                <span class="tag">Fleurs</span>
+                            </div>
+                            <div class="example-prompt">
+                                "Botanical print of tropical leaves, scientific illustration style, detailed linework, museum quality, vertical"
+                            </div>
+                            <button class="try-btn" onclick="tryExample('poster', 'illustration', 'flowers')">
+                                <i class="fas fa-magic"></i> Essayer ce style
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="example-card">
+                        <div class="example-image">✨</div>
+                        <div class="example-content">
+                            <div class="example-title">Poster Citation Inspirante</div>
+                            <div class="example-description">
+                                Typographie élégante avec message motivant. Best-seller constant.
+                            </div>
+                            <div class="example-tags">
+                                <span class="tag">Poster</span>
+                                <span class="tag">Typographie</span>
+                                <span class="tag">Motivation</span>
+                            </div>
+                            <div class="example-prompt">
+                                "Motivational quote 'Dream Big' with elegant typography, inspiring design, clean layout, vertical poster"
+                            </div>
+                            <button class="try-btn" onclick="tryExample('poster', 'typography', 'motivation')">
+                                <i class="fas fa-magic"></i> Essayer ce style
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tips Section -->
+            <section class="category-section">
+                <h2 class="category-title">
+                    <i class="fas fa-lightbulb"></i>
+                    Conseils pour Maximiser les Ventes
+                </h2>
+                <div class="inspiration-grid">
+                    <div class="tip-card">
+                        <i class="fas fa-star"></i>
+                        <h3>Créez des Collections</h3>
+                        <p>Proposez 3-5 variations d'un même thème pour augmenter vos chances de vente.</p>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-calendar"></i>
+                        <h3>Suivez les Saisons</h3>
+                        <p>Noël, Halloween, Saint-Valentin : préparez vos designs 2-3 mois à l'avance.</p>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-tags"></i>
+                        <h3>Testez les Prix</h3>
+                        <p>Commencez 20-30% moins cher que les leaders, puis ajustez selon les ventes.</p>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-chart-bar"></i>
+                        <h3>Analysez les Données</h3>
+                        <p>Utilisez Etsy Analytics pour identifier vos designs les plus performants.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <section class="category-section" style="text-align: center;">
+                <h2 class="category-title" style="justify-content: center;">
+                    <i class="fas fa-rocket"></i>
+                    Prêt à Créer Vos Designs ?
+                </h2>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem; color: var(--text-secondary);">
+                    Utilisez ces exemples comme inspiration et créez vos propres designs uniques !
+                </p>
+                <button onclick="window.location.href='index.html'" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; padding: 1.5rem 3rem; border-radius: 12px; font-size: 1.2rem; font-weight: 700; cursor: pointer; box-shadow: var(--shadow-lg);">
+                    <i class="fas fa-paint-brush"></i> Commencer à Créer
+                </button>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>🎨 Design Generator Pro - Exemples & Inspiration</p>
+            <p class="footer-note">
+                <a href="index.html" style="color: var(--primary-color);">Retour à l'application</a> |
+                <a href="README.md" style="color: var(--primary-color);">Documentation</a> |
+                <a href="QUICKSTART.md" style="color: var(--primary-color);">Guide rapide</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function tryExample(product, style, theme) {
+            // Save to localStorage for main app
+            localStorage.setItem('example_product', product);
+            localStorage.setItem('example_style', style);
+            localStorage.setItem('example_theme', theme);
+            
+            // Redirect to main app
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
