@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Génération Designs Etsy/Gelato 🎨</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-paint-brush"></i>
+                    <h1>Design Generator Pro</h1>
+                </div>
+                <div class="header-subtitle">
+                    <p>🎨 Générateur de designs optimisés pour Etsy & Gelato</p>
+                </div>
+                <div class="header-buttons">
+                    <button class="api-config-btn examples-btn" onclick="window.location.href='examples.html'" style="right: 200px;">
+                        <i class="fas fa-lightbulb"></i> Exemples
+                    </button>
+                    <button class="api-config-btn" onclick="openApiConfig()">
+                        <i class="fas fa-key"></i> Configurer API
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            
+            <!-- Quick Start Section -->
+            <section class="quick-start">
+                <h2><i class="fas fa-rocket"></i> Démarrage Rapide</h2>
+                <div class="quick-buttons">
+                    <button class="quick-btn" onclick="quickGenerate('minimalist', 'trending')">
+                        <i class="fas fa-fire"></i> Tendance Minimaliste
+                    </button>
+                    <button class="quick-btn" onclick="quickGenerate('vintage', 'nature')">
+                        <i class="fas fa-leaf"></i> Nature Vintage
+                    </button>
+                    <button class="quick-btn" onclick="quickGenerate('abstract', 'geometric')">
+                        <i class="fas fa-shapes"></i> Abstract Géométrique
+                    </button>
+                    <button class="quick-btn" onclick="quickGenerate('watercolor', 'flowers')">
+                        <i class="fas fa-palette"></i> Fleurs Aquarelle
+                    </button>
+                </div>
+            </section>
+
+            <!-- Generator Form -->
+            <section class="generator-section">
+                <h2><i class="fas fa-magic"></i> Générateur Personnalisé</h2>
+                
+                <!-- Important Notice -->
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1rem 1.5rem; border-radius: 12px; margin-bottom: 2rem; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);">
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <i class="fas fa-sparkles" style="font-size: 2rem;"></i>
+                        <div>
+                            <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem;">✨ Générateur de Designs Universels</h3>
+                            <p style="margin: 0; font-size: 0.95rem; opacity: 0.95;">
+                                <strong>Simple et Flexible :</strong> Génère des designs/motifs plats sans objets, utilisables sur N'IMPORTE QUEL produit (mug, t-shirt, poster, coque, etc.). 
+                                Parfait pour tous vos besoins d'impression ! 🎨
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="generator-form">
+                    <!-- Style -->
+                    <div class="form-group">
+                        <label><i class="fas fa-palette"></i> Style Visuel</label>
+                        <div class="style-grid">
+                            <div class="style-tag" data-style="minimalist">Minimaliste</div>
+                            <div class="style-tag" data-style="vintage">Vintage</div>
+                            <div class="style-tag" data-style="abstract">Abstrait</div>
+                            <div class="style-tag" data-style="illustration">Illustration</div>
+                            <div class="style-tag" data-style="typography">Typographie</div>
+                            <div class="style-tag" data-style="geometric">Géométrique</div>
+                            <div class="style-tag" data-style="watercolor">Aquarelle</div>
+                            <div class="style-tag" data-style="line-art">Line Art</div>
+                            <div class="style-tag" data-style="retro">Rétro</div>
+                            <div class="style-tag" data-style="modern">Moderne</div>
+                        </div>
+                    </div>
+
+                    <!-- Theme -->
+                    <div class="form-group">
+                        <label><i class="fas fa-lightbulb"></i> Thème / Niche</label>
+                        <div class="theme-grid">
+                            <div class="theme-tag" data-theme="trending">🔥 Tendance</div>
+                            <div class="theme-tag" data-theme="coffee">☕ Café</div>
+                            <div class="theme-tag" data-theme="nature">🌿 Nature</div>
+                            <div class="theme-tag" data-theme="animals">🐾 Animaux</div>
+                            <div class="theme-tag" data-theme="motivation">💪 Motivation</div>
+                            <div class="theme-tag" data-theme="humor">😄 Humour</div>
+                            <div class="theme-tag" data-theme="space">🚀 Espace</div>
+                            <div class="theme-tag" data-theme="flowers">🌸 Fleurs</div>
+                            <div class="theme-tag" data-theme="ocean">🌊 Océan</div>
+                            <div class="theme-tag" data-theme="christmas">🎄 Noël</div>
+                            <div class="theme-tag" data-theme="halloween">🎃 Halloween</div>
+                            <div class="theme-tag" data-theme="love">❤️ Amour</div>
+                        </div>
+                    </div>
+
+                    <!-- Custom Prompt -->
+                    <div class="form-group">
+                        <label><i class="fas fa-keyboard"></i> Description Personnalisée (optionnel)</label>
+                        <textarea id="customPrompt" rows="3" placeholder="Ex: Un chat mignon buvant du café avec une citation inspirante en style aquarelle pastel..."></textarea>
+                    </div>
+
+                    <!-- Aspect Ratio -->
+                    <div class="form-group">
+                        <label><i class="fas fa-expand"></i> Format</label>
+                        <div class="ratio-grid">
+                            <div class="ratio-tag" data-ratio="1:1">1:1 (Carré)</div>
+                            <div class="ratio-tag" data-ratio="4:3">4:3 (Standard)</div>
+                            <div class="ratio-tag" data-ratio="16:9">16:9 (Large)</div>
+                            <div class="ratio-tag" data-ratio="3:4">3:4 (Portrait)</div>
+                            <div class="ratio-tag" data-ratio="9:16">9:16 (Vertical)</div>
+                        </div>
+                    </div>
+
+                    <!-- Generate Button -->
+                    <button class="generate-btn" onclick="generateDesign()">
+                        <i class="fas fa-magic"></i> Générer le Design
+                    </button>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section" id="resultsSection" style="display: none;">
+                <h2><i class="fas fa-images"></i> Designs Générés</h2>
+                <div class="results-info" id="resultsInfo"></div>
+                <div class="results-grid" id="resultsGrid"></div>
+            </section>
+
+            <!-- Tips Section -->
+            <section class="tips-section">
+                <h2><i class="fas fa-star"></i> Conseils Pro pour Etsy</h2>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Tendances Actuelles</h3>
+                        <p>Designs minimalistes, citations motivantes, et illustrations botaniques sont très populaires en 2024.</p>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-search"></i>
+                        <h3>Mots-clés SEO</h3>
+                        <p>Utilisez des termes comme "cadeau personnalisé", "unique", "fait main" dans vos titres Etsy.</p>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-image"></i>
+                        <h3>Spécifications Gelato</h3>
+                        <p>Résolution minimale 300 DPI, format PNG avec fond transparent pour les designs sur vêtements.</p>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-dollar-sign"></i>
+                        <h3>Prix Optimal</h3>
+                        <p>Positionnez vos prix 20-30% en dessous des leaders pour démarrer, puis ajustez selon les ventes.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Specifications Table -->
+            <section class="specs-section">
+                <h2><i class="fas fa-ruler-combined"></i> Spécifications Techniques Gelato</h2>
+                <div class="specs-table-wrapper">
+                    <table class="specs-table">
+                        <thead>
+                            <tr>
+                                <th>Produit</th>
+                                <th>Dimensions recommandées</th>
+                                <th>Résolution</th>
+                                <th>Format</th>
+                                <th>Zone de sécurité</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><i class="fas fa-mug-hot"></i> Mug 11oz</td>
+                                <td>2475 x 1155 px</td>
+                                <td>300 DPI</td>
+                                <td>PNG</td>
+                                <td>3mm</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-tshirt"></i> T-shirt</td>
+                                <td>4500 x 5400 px</td>
+                                <td>300 DPI</td>
+                                <td>PNG transparent</td>
+                                <td>5mm</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-mobile-alt"></i> Coque iPhone</td>
+                                <td>3000 x 3000 px</td>
+                                <td>300 DPI</td>
+                                <td>PNG</td>
+                                <td>3mm</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-image"></i> Poster A4</td>
+                                <td>2480 x 3508 px</td>
+                                <td>300 DPI</td>
+                                <td>PDF/PNG</td>
+                                <td>3mm bleed</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-vest"></i> Sweatshirt</td>
+                                <td>4500 x 5400 px</td>
+                                <td>300 DPI</td>
+                                <td>PNG transparent</td>
+                                <td>5mm</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-shopping-bag"></i> Tote Bag</td>
+                                <td>4500 x 5400 px</td>
+                                <td>300 DPI</td>
+                                <td>PNG transparent</td>
+                                <td>5mm</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>🎨 Design Generator Pro - Optimisé pour Etsy & Gelato</p>
+            <p class="footer-note">💡 Générez des designs professionnels en quelques clics</p>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Génération en cours...</p>
+            <small>Création de votre design professionnel</small>
+        </div>
+    </div>
+
+    <!-- API Configuration Modal -->
+    <div class="modal-overlay" id="apiConfigModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fas fa-key"></i> Configuration OpenAI API</h2>
+                <button class="modal-close" onclick="closeApiConfig()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="api-status" id="apiStatus">
+                    <i class="fas fa-circle"></i>
+                    <span>Statut: <strong id="apiStatusText">Non configuré</strong></span>
+                </div>
+                
+                <div class="form-group-modal">
+                    <label for="apiKeyInput">
+                        <i class="fas fa-lock"></i> Clé API OpenAI
+                    </label>
+                    <input 
+                        type="password" 
+                        id="apiKeyInput" 
+                        placeholder="sk-..." 
+                        autocomplete="off"
+                    />
+                    <small>Votre clé API est stockée localement dans votre navigateur et n'est jamais envoyée ailleurs qu'à OpenAI.</small>
+                </div>
+
+                <div class="api-info">
+                    <h3><i class="fas fa-info-circle"></i> Comment obtenir votre clé API ?</h3>
+                    <ol>
+                        <li>Allez sur <a href="https://platform.openai.com/api-keys" target="_blank">platform.openai.com/api-keys</a></li>
+                        <li>Connectez-vous ou créez un compte OpenAI</li>
+                        <li>Cliquez sur "Create new secret key"</li>
+                        <li>Copiez votre clé (elle commence par "sk-")</li>
+                        <li>Collez-la ci-dessus</li>
+                    </ol>
+                    <p class="api-cost">💰 <strong>Coût:</strong> ~$0.04 par image générée en qualité HD (DALL-E 3)</p>
+                </div>
+
+                <div class="modal-actions">
+                    <button class="btn-save" onclick="saveApiConfig()">
+                        <i class="fas fa-save"></i> Sauvegarder
+                    </button>
+                    <button class="btn-clear" onclick="clearApiConfig()">
+                        <i class="fas fa-trash"></i> Supprimer
+                    </button>
+                    <button class="btn-test" onclick="testApiConfig()">
+                        <i class="fas fa-vial"></i> Tester
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
